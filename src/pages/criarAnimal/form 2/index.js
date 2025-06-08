@@ -1,5 +1,5 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { ScrollView, TextInput } from "react-native-gesture-handler";
 import Cabecalho from "../../../components/header";
 import { useNavigation } from "@react-navigation/native";
 
@@ -25,7 +25,29 @@ export function CriarAnimal2(){
                             GESTAÇÃO
                         </Text>
 
-                        
+                        <TextInput
+                            style={styles.inputs}
+                            placeholder="Parto:"
+                            onChangeText={(text) => setName(text)}
+                        />
+
+                        <TextInput
+                            style={styles.inputs}
+                            placeholder="Tempo de gestação:"
+                            onChangeText={(text) => setName(text)}
+                        />
+
+                        <TextInput
+                            style={styles.inputs}
+                            placeholder="Mãe:"
+                            onChangeText={(text) => setName(text)}
+                        />
+
+                        <TextInput
+                            style={styles.inputs}
+                            placeholder="Pai:"
+                            onChangeText={(text) => setName(text)}
+                        />
 
                     </View>
                     
@@ -61,8 +83,18 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
 
-    inputsCreateAnimal:{
-
+    inputs:{
+        backgroundColor: "white",
+        padding: 10,
+        margin: 40,
+        marginBottom: 10,
+        marginTop: 10,
+        borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        fontSize: 16,
     },
 
 
