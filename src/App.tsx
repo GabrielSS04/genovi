@@ -1,10 +1,13 @@
 import { NavigationContainer } from "@react-navigation/native";
 import Routes from "./routes";
+import { OvelhaProvider } from "./components/OvelhaContext";
 
 export function App() {
   return (
-    <NavigationContainer>
-      <Routes/>
-    </NavigationContainer>
+    <OvelhaProvider>
+      <NavigationContainer>
+        <Routes/>
+      </NavigationContainer>
+    </OvelhaProvider>
   );
 }

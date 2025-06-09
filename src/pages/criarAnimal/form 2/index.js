@@ -22,18 +22,12 @@ export function CriarAnimal2(){
                     
                     <View style={styles.inputsCreateAnimal}>
                         <Text style={styles.title}>
-                            GESTAÇÃO
+                            ASCÊNDENCIA
                         </Text>
 
                         <TextInput
                             style={styles.inputs}
-                            placeholder="Parto:"
-                            onChangeText={(text) => setName(text)}
-                        />
-
-                        <TextInput
-                            style={styles.inputs}
-                            placeholder="Tempo de gestação:"
+                            placeholder="Grau de pureza:"
                             onChangeText={(text) => setName(text)}
                         />
 

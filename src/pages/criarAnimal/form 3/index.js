@@ -19,30 +19,30 @@ export function CriarAnimal3(){
 
                         <View style={styles.inputsCreateAnimal}>
                             <Text style={styles.title}>
-                                PROPRIETÁRIO
+                                PARTO
                             </Text>
     
                             <TextInput
                                 style={styles.inputs}
-                                placeholder="Proprietário:"
+                                placeholder="Data do parto:"
                                 onChangeText={(text) => setName(text)}
                             />
 
                             <TextInput
                                 style={styles.inputs}
-                                placeholder="Fazenda:"
-                                onChangeText={(text) => setName(text)}
-                            />
-
-                            <TextInput
-                                style={styles.inputs}
-                                placeholder="Município:"
+                                placeholder="Descrição:"
                                 onChangeText={(text) => setName(text)}
                             />
 
                             <TextInput
                                 style={styles.inputs}
                                 placeholder="Criador:"
+                                onChangeText={(text) => setName(text)}
+                            />
+
+                            <TextInput
+                                style={styles.inputs}
+                                placeholder="Reprodução:"
                                 onChangeText={(text) => setName(text)}
                             />
     

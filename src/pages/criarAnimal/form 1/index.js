@@ -3,10 +3,14 @@ import { ScrollView, TextInput } from "react-native-gesture-handler";
 import Cabecalho from "../../../components/header";
 import { useNavigation } from "@react-navigation/native";
 
+import { useOvelhas } from "../../../components/OvelhaContext";
+
 
 export function CriarAnimal(){
 
     const navigator = useNavigation()
+
+    const { adicionarOvelha } = useOvelhas();
     
     return(
         <>
@@ -25,36 +29,53 @@ export function CriarAnimal(){
                             INFORMAÇÕES
                         </Text>
 
-                        <TextInput
-                            style={styles.inputs}
-                            placeholder="Nome:"
-                            onChangeText={(text) => setName(text)}
-                        />
-                        <TextInput
-                            style={styles.inputs}
-                            placeholder="Raça:"
-                            onChangeText={(text) => setName(text)}
-                        />
-                        <TextInput
-                            style={styles.inputs}
-                            placeholder="Sexo:"
-                            onChangeText={(text) => setName(text)}
-                        />
-                        <TextInput
-                            style={styles.inputs}
-                            placeholder="Nascimento:"
-                            onChangeText={(text) => setName(text)}
-                        />
-                        <TextInput
-                            style={styles.inputs}
-                            placeholder="Peso:"
-                            onChangeText={(text) => setName(text)}
-                        />
-                        <TextInput
-                            style={styles.inputs}
-                            placeholder="Pelagem:"
-                            onChangeText={(text) => setName(text)}
-                        />
+                        <View sryle={styles.areaInput}>
+                            <Text style={styles.textInputs} >Nome:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
+
+                        <View style={styles.areaInput}>
+                            <Text style={styles.textInputs}>Raça:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
+
+                        <View>
+                            <Text style={styles.textInputs}>Sexo:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
+
+                        <View>
+                            <Text style={styles.textInputs}>Data:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
+
+                        <View>
+                            <Text style={styles.textInputs}>Criador:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
+
+                        <View>
+                            <Text style={styles.textInputs}>Status reprodutivo:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
 
 
                     </View>
@@ -87,7 +108,7 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     title:{
-        fontSize: 24,
+        fontSize: 22,
         alignSelf: "center",
     },
 
@@ -95,8 +116,8 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         padding: 10,
         margin: 40,
-        marginBottom: 10,
-        marginTop: 10,
+        marginBottom: 5,
+        marginTop: 5,
         borderRadius: 10,
         shadowColor: "#000",
         shadowOffset: { width: 0, height: 2 },
@@ -124,5 +145,9 @@ const styles = StyleSheet.create({
         color: "white",
         fontWeight: "bold",
         fontSize: 22,
-    }
+    },
+
+    textInputs:{
+        marginLeft: 50,
+    },
 })
