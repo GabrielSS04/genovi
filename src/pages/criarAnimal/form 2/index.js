@@ -25,23 +25,21 @@ export function CriarAnimal2(){
                             ASCÊNDENCIA
                         </Text>
 
-                        <TextInput
-                            style={styles.inputs}
-                            placeholder="Grau de pureza:"
-                            onChangeText={(text) => setName(text)}
-                        />
+                        <View>
+                            <Text style={styles.textInputs}>Ovino materno:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
 
-                        <TextInput
-                            style={styles.inputs}
-                            placeholder="Mãe:"
-                            onChangeText={(text) => setName(text)}
-                        />
-
-                        <TextInput
-                            style={styles.inputs}
-                            placeholder="Pai:"
-                            onChangeText={(text) => setName(text)}
-                        />
+                        <View>
+                            <Text style={styles.textInputs}>Ovino paterno:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
 
                     </View>
                     
@@ -66,9 +64,15 @@ const styles = StyleSheet.create({
     scrollContainer:{
 
     },
+
+    textInputs:{
+        marginLeft: 50,
+        fontSize: 18,
+    },
     title:{
         fontSize: 24,
         alignSelf: "center",
+        marginBottom: 60,
     },
 
     stagesImage:{

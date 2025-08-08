@@ -22,29 +22,37 @@ export function CriarAnimal3(){
                                 PARTO
                             </Text>
     
-                            <TextInput
-                                style={styles.inputs}
-                                placeholder="Data do parto:"
-                                onChangeText={(text) => setName(text)}
-                            />
+                            <View>
+                                <Text style={styles.textInputs}>Nome do criador:</Text>
+                                <TextInput
+                                    style={styles.inputs}
+                                    onChangeText={(text) => setName(text)}
+                                />
+                            </View>
 
-                            <TextInput
-                                style={styles.inputs}
-                                placeholder="Descrição:"
-                                onChangeText={(text) => setName(text)}
-                            />
+                            <View>
+                                <Text style={styles.textInputs}>CPF/CNPJ:</Text>
+                                <TextInput
+                                    style={styles.inputs}
+                                    onChangeText={(text) => setName(text)}
+                                />
+                            </View>
 
-                            <TextInput
-                                style={styles.inputs}
-                                placeholder="Criador:"
-                                onChangeText={(text) => setName(text)}
-                            />
+                            <View>
+                                <Text style={styles.textInputs}>Endereço:</Text>
+                                <TextInput
+                                    style={styles.inputs}
+                                    onChangeText={(text) => setName(text)}
+                                />
+                            </View>
 
-                            <TextInput
-                                style={styles.inputs}
-                                placeholder="Reprodução:"
-                                onChangeText={(text) => setName(text)}
-                            />
+                            <View>
+                                <Text style={styles.textInputs}>Telefone:</Text>
+                                <TextInput
+                                    style={styles.inputs}
+                                    onChangeText={(text) => setName(text)}
+                                />
+                            </View>
     
                         </View>
     
@@ -63,6 +71,10 @@ const styles = StyleSheet.create({
     scrollContainer:{
 
     },
+    textInputs:{
+        marginLeft: 50,
+        fontSize: 18,
+    },
     textTest:{
         fontSize: 28,
         marginTop: 200,
@@ -74,6 +86,7 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     title:{
+        marginBottom: 60,
         fontSize: 24,
         alignSelf: "center",
     },

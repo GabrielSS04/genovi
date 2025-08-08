@@ -29,7 +29,7 @@ export function CriarAnimal(){
                             INFORMAÇÕES
                         </Text>
 
-                        <View sryle={styles.areaInput}>
+                        <View style={styles.areaInput}>
                             <Text style={styles.textInputs} >Nome:</Text>
                             <TextInput
                                 style={styles.inputs}
@@ -45,32 +45,62 @@ export function CriarAnimal(){
                             />
                         </View>
 
-                        <View>
+                        <View style={styles.areaInput}>
+                            <Text style={styles.textInputs}>FBB:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
+
+                        <View style={styles.areaInput}>
+                            <Text style={styles.textInputs}>Data de nascimento:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
+
+                        <View style={styles.areaInput}>
+                            <Text style={styles.textInputs}>Tempo da fazenda:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
+
+                        <View style={styles.areaInput}>
+                            <Text style={styles.textInputs}>Grau de pureza:</Text>
+                            <TextInput
+                                style={styles.inputs}
+                                onChangeText={(text) => setName(text)}
+                            />
+                        </View>
+
+                        <View style={styles.areaInputSP}>
                             <Text style={styles.textInputs}>Sexo:</Text>
                             <TextInput
-                                style={styles.inputs}
+                                style={styles.inputsSexo}
+                                onChangeText={(text) => setName(text)}
+                            />
+
+                            <Text style={styles.textInputs}>Peso:</Text>
+                            <TextInput
+                                style={styles.inputsPeso}
                                 onChangeText={(text) => setName(text)}
                             />
                         </View>
 
-                        <View>
-                            <Text style={styles.textInputs}>Data:</Text>
+                        <View style={styles.areaInput}>
+                            <Text style={styles.textInputs}>Comportamento:</Text>
                             <TextInput
                                 style={styles.inputs}
                                 onChangeText={(text) => setName(text)}
                             />
                         </View>
 
-                        <View>
-                            <Text style={styles.textInputs}>Criador:</Text>
-                            <TextInput
-                                style={styles.inputs}
-                                onChangeText={(text) => setName(text)}
-                            />
-                        </View>
-
-                        <View>
-                            <Text style={styles.textInputs}>Status reprodutivo:</Text>
+                        <View style={styles.areaInput}>
+                            <Text style={styles.textInputs}>Status:</Text>
                             <TextInput
                                 style={styles.inputs}
                                 onChangeText={(text) => setName(text)}
@@ -114,7 +144,7 @@ const styles = StyleSheet.create({
 
     inputs:{
         backgroundColor: "white",
-        padding: 10,
+        padding: 5,
         margin: 40,
         marginBottom: 5,
         marginTop: 5,
@@ -124,6 +154,36 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         fontSize: 16,
+    },
+
+    inputsPeso:{
+        backgroundColor: "white",
+        padding: 5,
+        margin: 10,
+        marginBottom: 5,
+        marginTop: 5,
+        borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        fontSize: 16,
+        width: 70,
+    },
+
+    inputsSexo:{
+        backgroundColor: "white",
+        padding: 5,
+        margin: 10,
+        marginBottom: 5,
+        marginTop: 5,
+        borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        fontSize: 16,
+        width: 70,
     },
 
     textTest:{
@@ -149,5 +209,13 @@ const styles = StyleSheet.create({
 
     textInputs:{
         marginLeft: 50,
+    },
+
+    areaInputSP:{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        marginBottom: 10,
+        marginTop: 5,
     },
 })
